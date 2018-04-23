@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8099
   context-path: /bootdo
 
 # 不需要进行弹窗认证
@@ -14,3 +14,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/bootdo?useUnicode=true&characterEncoding=utf8
     username: root
     password:
+
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
