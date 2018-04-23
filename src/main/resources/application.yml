@@ -1,0 +1,16 @@
+server:
+  port: 8001
+  context-path: /bootdo
+
+# 不需要进行弹窗认证
+security:
+  basic:
+    enabled: false
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/bootdo?useUnicode=true&characterEncoding=utf8
+    username: root
+    password:
