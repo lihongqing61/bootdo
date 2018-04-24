@@ -23,5 +23,4 @@ mybatis:
   # 指定Mapper.xml文件位置
   mapper-locations: classpath*:mybatis/**/*Mapper.xml
   # 配置短名
-  type-aliases-package: com.bootdo.blog.domain
-  #typeAliasesPackage: com.bootdo.blog.domain
+  typeAliasesPackage: com.bootdo

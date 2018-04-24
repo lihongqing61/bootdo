@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.bootdo.blog.dao.ContentDAO">
+<mapper namespace="com.bootdo.system.dao.UserDAO">
     <sql id="base_column">
-        `cid`,`title`,`slug`,`created`,`modified`,`content`,`type`,`tags`,`categories`,`hits`,`comments_num`,`allow_comment`,`allow_ping`,`allow_feed`,`status`,`author`,`gtm_create`,`gtm_modified`
+        `user_id`,`username`,`name`,`password`,`dept_id`,`email`,`mobile`,`status`,`user_id_create`,`gmt_create`,`gmt_modified`,`sex`,`birth`,`pic_id`,`live_address`,`hobby`,`province`,`city`,`district`
     </sql>
 
-    <select id="list" parameterType="com.bootdo.common.utils.Query" resultType="ContentDO">
+    <select id="queryByUsername" parameterType="string" resultType="userDO">
         SELECT <include refid="base_column"></include>
-        FROM blog_content
-        <if test="offset != null and limit != null">
-            limit ${offset}, ${limit}
-        </if>
+        FROM sys_user
+        WHERE username = #{value}
     </select>
 
-    <select id="count" parameterType="com.bootdo.common.utils.Query" resultType="int">
-        SELECT count(*)
-        FROM blog_content
-    </select>
 </mapper>
