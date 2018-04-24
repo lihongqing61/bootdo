@@ -1,6 +1,5 @@
 server:
   port: 8099
-  context-path: /bootdo
 
 # 不需要进行弹窗认证
 security:
@@ -18,3 +17,11 @@ spring:
   thymeleaf:
     mode: LEGACYHTML5
     cache: false
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  # 指定Mapper.xml文件位置
+  mapper-locations: classpath*:mybatis/**/*Mapper.xml
+  # 配置短名
+  type-aliases-package: com.bootdo.blog.domain
+  #typeAliasesPackage: com.bootdo.blog.domain
