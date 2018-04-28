@@ -11,5 +11,6 @@ import java.util.List;
  * Date: 2018/4/28 16:31
  */
 public interface MenuService {
+
     List<Tree<MenuDO>> listMenuTree(Long userId);
 }

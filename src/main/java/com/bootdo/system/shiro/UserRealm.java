@@ -42,7 +42,7 @@ public class UserRealm extends AuthorizingRealm {
             throw new LockedAccountException("账号已被锁定,请联系管理员");
         }
 
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, this.getName());
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, password, this.getName());
         return info;
     }
 }

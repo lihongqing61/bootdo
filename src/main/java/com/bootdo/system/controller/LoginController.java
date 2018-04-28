@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -52,9 +53,13 @@ public class LoginController extends BaseController {
     }
 
     @GetMapping("/index")
-    @ResponseBody
-    public String index() {
+    //@ResponseBody
+    public String index(Model model) {
         List<Tree<MenuDO>> menus = menuService.listMenuTree(getUserId());
-        return null;
+        model.addAttribute("menus", menus);
+        model.addAttribute("name", getUser().getName());
+        model.addAttribute("username", getUser().getUsername());
+        // TODO 图片还未设置
+        return "index_v1";
     }
 }
