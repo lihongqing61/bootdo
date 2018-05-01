@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
-        System.out.println("ヾ(◍°∇°◍)ﾉﾞ    bootdo启动成功      ヾ(◍°∇°◍)ﾉﾞ\n" +
+        System.out.println("ヾ(◍°∇°◍)ﾉﾞ    bootdo启动成功了      ヾ(◍°∇°◍)ﾉﾞ\n" +
                 " ______                    _   ______            \n" +
                 "|_   _ \\                  / |_|_   _ `.          \n" +
                 "  | |_) |   .--.    .--. `| |-' | | `. \\  .--.   \n" +
