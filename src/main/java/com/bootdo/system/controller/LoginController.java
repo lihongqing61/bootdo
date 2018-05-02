@@ -17,8 +17,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -61,5 +59,10 @@ public class LoginController extends BaseController {
         model.addAttribute("username", getUser().getUsername());
         // TODO 图片还未设置
         return "index_v1";
+    }
+
+    @GetMapping("/main")
+    public String main() {
+        return "main";
     }
 }
